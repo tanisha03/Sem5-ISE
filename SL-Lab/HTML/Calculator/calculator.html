@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html>
+<body>
+<form name="Calc">
+<table border=1>
+<tr>
+<td>
+<input type="text" name="Numbers" size=16 />
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" value="  1  " onClick="document.Calc.Numbers.value += '1'"/>
+<input type="button" value="  2  " onClick="document.Calc.Numbers.value += '2'"/>
+<input type="button" value="  3  " onClick="document.Calc.Numbers.value += '3'"/>
+<input type="button" value="  +  " onClick="document.Calc.Numbers.value += '+'"/>
+<br />
+<input type="button" value="  4  " onClick="document.Calc.Numbers.value += '4'"/>
+<input type="button" value="  5  " onClick="document.Calc.Numbers.value += '5'"/>
+<input type="button" value="  6  " onClick="document.Calc.Numbers.value += '5'"/>
+<input type="button" value="  -  " onClick="document.Calc.Numbers.value += '-'"/>
+<br />
+<input type="button" value="  7  " onClick="document.Calc.Numbers.value += '7'"/>
+<input type="button" value="  8  " onClick="document.Calc.Numbers.value += '8'"/>
+<input type="button" value="  9  " onClick="document.Calc.Numbers.value += '9'"/>
+<input type="button" value="  x  " onClick="document.Calc.Numbers.value += '*'"/>
+<br />
+<input type="button" value="  AC  " onClick="document.Calc.Numbers.value = ' '"/>
+<input type="button" value="  0  " onClick="document.Calc.Numbers.value += '0'"/>
+<input type="button" value="  /  " onClick="document.Calc.Numbers.value += '/'"/>
+<input type="button" value="  =  " onClick="document.Calc.Numbers.value = eval(Calc.Numbers.value)"/>
+<br />
+</td>
+</tr>
+</table>
+</body>
+</html>

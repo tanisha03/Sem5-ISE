@@ -15,9 +15,6 @@ l1=[]
 for i in range(3):
     reverser=Sentence_rev(input("enter a string\n"))
     l1.append(reverser)
-    # print(reverser.ret_rev())
-    # print(reverser.count_vow())
-    # print()
 
 for i in sorted(l1,key=lambda i:i.count_vow(),reverse=True):
     print(i.ret_rev())

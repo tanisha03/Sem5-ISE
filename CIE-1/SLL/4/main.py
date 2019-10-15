@@ -22,7 +22,6 @@ with open(sys.argv[2]) as file:
             dict[word]=dict.get(word,0)+1
 
 t=sorted([(v,k) for k,v in dict.items()],reverse=True)
-# print(t)
 l1=[]
 
 for p in t[0:10]:

@@ -46,18 +46,18 @@ $ns duplex-link-op $n(0) $n(2) orient right-down
 $ns duplex-link-op $n(1) $n(2) orient right-up
 $ns simplex-link-op $n(2) $n(3) orient right
 
-# setup queue between n(2) and n(3) and monitor the queue
+#Setup queue between n(2) and n(3) and monitor the queue
 $ns queue-limit $n(2) $n(3) 20
 $ns simplex-link-op $n(2) $n(3) queuePos 0.5
 
-# set error model on link n(2) and n(3) and insert the error model
-set loss_module [new ErroModel]
+#Set error model on link n(2) and n(3) and insert the error model
+set loss_module [new ErrorModel]
 $loss_module ranvar [new RandomVariable/Uniform]
 $loss_module drop-target [new Agent/Null]
 $loss_module set rate_ $error_rate
 $ns lossmodel $loss_module $n(2) $n(3)
 
-# setup TCP connection between n(0) and n(4)
+#Setup TCP Connection between n(0) and n(4)
 set tcp [new Agent/TCP/Newreno]
 $tcp set fid_ 1
 $tcp set window_ 8000
@@ -67,12 +67,12 @@ set sink0 [new Agent/TCPSink/DelAck]
 $ns attach-agent $n(4) $sink0
 $ns connect $tcp $sink0
 
-# Apply FTP Application over TCP
+#Apply FTP Application over TCP
 set ftp [new Application/FTP]
 $ftp set type_ FTP
 $ftp attach-agent $tcp
 
-# Setup UDP connection between n(1) and n(5)
+#Setup UDP Connection between n(1) and n(5)
 set udp0 [new Agent/UDP]
 $udp0 set fid_ 2
 $ns attach-agent $n(1) $udp0

@@ -12,16 +12,6 @@ $ns trace-all $traceFile
 set namFile [open out.nam w]
 $ns namtrace-all $namFile
 
-# proc finish {} {
-#     global ns, namFile, traceFile
-#     $ns flush-trace
-#     close $traceFile
-#     close $namFile
-#     exec awk -f stats.awk 1.tr &
-#     exec nam out.nam
-#     exit 0
-# }
-
 proc finish {} {
 	global ns namFile traceFile
     

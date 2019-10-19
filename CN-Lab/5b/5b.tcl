@@ -17,7 +17,7 @@ proc finish {}   {
     close $traceFile
     close $namFile
     #calculate packet drops
-    exec gawk -f stats.awk 5.tr &
+    exec awk -f stats.awk 5.tr &
     exec nam 5.nam &
     exit 0
 }

@@ -1,0 +1,22 @@
+V -t * -v 1.0a5 -a 0
+A -t * -n 1 -p 0 -o 0x7fffffff -c 30 -a 1
+A -t * -h 1 -m 1073741823 -s 0
+c -t * -i 1 -n red
+c -t * -i 2 -n blue
+n -t * -a 4 -s 4 -S UP -v circle -c blue -i blue
+n -t * -a 0 -s 0 -S UP -v circle -c blue -i blue
+n -t * -a 5 -s 5 -S UP -v box -c red -i red
+n -t * -a 1 -s 1 -S UP -v box -c red -i red
+n -t * -a 6 -s 6 -S UP -v circle -c black -i black
+n -t * -a 2 -s 2 -S UP -v circle -c black -i black
+n -t * -a 3 -s 3 -S UP -v circle -c black -i black
+l -t * -s 0 -d 2 -S UP -r 1000000 -D 0.01 -c black -o right-down
+l -t * -s 1 -d 2 -S UP -r 1000000 -D 0.01 -c black -o right-up
+l -t * -s 2 -d 3 -S UP -r 1000000 -D 0.01 -c black -o right
+X -t * -n 7 -r 0.5Mb -D 40ms -o left
+L -t * -s 7 -d 3 -o up
+L -t * -s 7 -d 4 -o down
+L -t * -s 7 -d 5 -o up
+L -t * -s 7 -d 6 -o down
+n -t 0 -s 0 -S DLABEL -l "TCP_Traffic" -L ""
+n -t 0 -s 1 -S DLABEL -l "UDP_Traffic" -L ""

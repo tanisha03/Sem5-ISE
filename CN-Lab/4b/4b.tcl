@@ -12,11 +12,11 @@ set namFile [open 4.nam w]
 $ns namtrace-all $namFile
 
 proc finish {} {
-	 global ns namFile traceFile
-   $ns flush-trace
+        global ns namFile traceFile
+        $ns flush-trace
    #Close the trace files
-   close $traceFile
-   close $namFile
+        close $traceFile
+        close $namFile
 	 exec awk -f stats.awk 4.tr &
 	 exec nam 4.nam &
    exit 0
@@ -49,7 +49,7 @@ Agent/Ping instproc recv {from rtt} {
 #Create pingagents,queue-limits
 for {set i 1} {$i < 7} {incr i} {
         set pingAgent($i) [new Agent/Ping]
-				$ns attach-agent $n($i) $pingAgent($i)
+	$ns attach-agent $n($i) $pingAgent($i)
 }
 for {set i 1} {$i < 6} {incr i} {
 	$ns queue-limit $n(0) $n($i) 2

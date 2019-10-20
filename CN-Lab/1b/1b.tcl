@@ -59,7 +59,7 @@ $ns attach-agent $n3 $null0
 
 # Connect traffic source and sink and assign flow id color
 $ns connect $udp0 $null0
-$udp0 set fid_ 2
+# $udp0 set fid_ 2
 
 
 $ns at 0.5 "$cbr0 start"

@@ -41,7 +41,7 @@ for {set i 1} {$i < 7} {incr i} {
 
 Agent/Ping instproc recv {from rtt} {
         $self instvar node_
-        puts "node [$node_ id] received ping answer from 
+        puts "node [$node_ id] received ping answer from \
               $from with round-trip-time $rtt ms."
 }
 

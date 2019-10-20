@@ -60,7 +60,7 @@ $ns lossmodel $loss_module $n(2) $n(3)
 #Setup TCP Connection between n(0) and n(4)
 set tcp [new Agent/TCP/Newreno]
 $tcp set fid_ 1
-$tcp set window_ 8000
+# $tcp set window_ 8000
 $tcp set packetSize_ 552
 $ns attach-agent $n(0) $tcp
 set sink0 [new Agent/TCPSink/DelAck]

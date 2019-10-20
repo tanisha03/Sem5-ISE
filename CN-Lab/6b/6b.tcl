@@ -28,7 +28,7 @@ proc finish {} {
 
 
 #Create 6 nodes
-for {set i 0} {$i < 6} {incr i} {
+for {set i 0} {$i < 7} {incr i} {
 set n($i) [$ns node]
 }
 
@@ -39,7 +39,7 @@ $ns simplex-link $n(2) $n(3) 0.3Mb 100ms DropTail
 $ns simplex-link $n(3) $n(2) 0.3Mb 100ms DropTail
 
 #Node n(3), n(4) and n(5) are considered in a LAN
-set lan [$ns newLan "$n(3) $n(4) $n(5)" 0.5Mb 40ms LL Queue/DropTail MAC/802_3 Channel]
+set lan [$ns newLan "$n(3) $n(4) $n(5) $n(6)" 0.5Mb 40ms LL Queue/DropTail MAC/802_3 Channel]
 
 #Orientation to the nodes
 $ns duplex-link-op $n(0) $n(2) orient right-down

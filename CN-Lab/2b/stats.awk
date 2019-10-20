@@ -43,7 +43,7 @@ END{
 
     ftpTotal=ftpPackets*ftpSize*8;
 
-    printf("The Throughput of FTP application is %d \n", ftpTotal/24);
-
+    printf("The Throughput of FTP application is %d \n", ftpTotal/24); 
+    # because time of simulation is 24.5-0.5=24
     printf("The Throughput of TELNET application is %d \n", totalTelnet/24);
 }

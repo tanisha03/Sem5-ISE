@@ -64,7 +64,7 @@ $ftp set type_ FTP
 $ns at 0.5 "$telnet start"
 $ns at 0.6 "$ftp start"
 $ns at 24.5 "$telnet stop"
-$ns at 24.5 "$ftp stop"
+$ns at 24.6 "$ftp stop"
 $ns at 25.0 "finish"
 
 #Run Simulation

@@ -81,7 +81,7 @@ $ns connect $UDPAgent $nullSink
 set  cbr [new Application/Traffic/CBR]
 $cbr attach-agent $UDPAgent
 $cbr set type_ CBR
-$cbr set packetSize 1000
+$cbr set packetSize_ 1000
 $cbr set rate_ 0.05Mb
 $cbr set random_ false
 

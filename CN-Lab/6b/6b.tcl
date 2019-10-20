@@ -39,7 +39,7 @@ $ns simplex-link $n(2) $n(3) 0.3Mb 100ms DropTail
 $ns simplex-link $n(3) $n(2) 0.3Mb 100ms DropTail
 
 #Node n(3), n(4) and n(5) are considered in a LAN
-set lan [$ns newLan "$n(3) $n(4) $n(5) $n(6)" 0.5Mb 40ms LL Queue/DropTail MAC/802_3 Channel]
+set lan [$ns newLan "$n(3) $n(4) $n(5) $n(6)" 0.5Mb 40ms LL Queue/DropTail MAC/CSMA/Cd Channel]
 
 #Orientation to the nodes
 $ns duplex-link-op $n(0) $n(2) orient right-down
@@ -48,7 +48,7 @@ $ns simplex-link-op $n(2) $n(3) orient right
 
 #Setup queue between n(2) and n(3) and monitor the queue
 $ns queue-limit $n(2) $n(3) 20
-$ns simplex-link-op $n(2) $n(3) queuePos 0.5
+# $ns simplex-link-op $n(2) $n(3) queuePos 0.5
 
 #Set error model on link n(2) and n(3) and insert the error model
 set loss_module [new ErrorModel]

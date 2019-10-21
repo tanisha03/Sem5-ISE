@@ -55,13 +55,13 @@ $ns simplex-link-op $n(2) $n(3) orient right
 $ns simplex-link-op $n(3) $n(2) orient left
 
 #Create a TCP Agent
-set TCPAgent [new Agent/TCP/Newreno]
+set TCPAgent [new Agent/TCP]
 $ns attach-agent $n(0) $TCPAgent
 $TCPAgent set fid_ 1
 $TCPAgent set packetSize_ 552
 
 #Create a TCP Sink
-set TCPSink [new Agent/TCPSink/DelAck]
+set TCPSink [new Agent/TCPSink]
 $ns attach-agent $n(4) $TCPSink
 $ns connect $TCPAgent $TCPSink
 

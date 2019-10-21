@@ -30,8 +30,9 @@ name varchar(10),
  111 aaa 3  ISE
  222 bbb 4 CSE
  333 ccc 3  CSE
- 444 ddd       4 ISE
+ 444 ddd 4 ISE
  555 eee 4  ISE
+);
 
  create table borrow
  (

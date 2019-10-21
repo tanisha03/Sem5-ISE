@@ -20,7 +20,7 @@ create table supply
   pno number(10),
   sno number(10),
   quantity varchar(20),
-  primary key(pno,sno)
+  primary key(pno,sno),
   foreign key(pno) references part(pno) on delete cascade,
   foreign key(sno) references supplier(sno) on delete cascade
 );

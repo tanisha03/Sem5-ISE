@@ -2,7 +2,7 @@
 #Create Simulator
 set ns [new Simulator]
 
-set error_rate 0.00
+set error_rate 0.0
 
 #Use colors to differentiate the traffic
 $ns color 1 Blue

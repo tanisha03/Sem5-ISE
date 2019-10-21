@@ -2,7 +2,6 @@
 #between  them.  Set the queue size and vary the bandwidth and find the number of packets dropped
 
 
-
 #Create a simulator object
 set ns [new Simulator]
 
@@ -46,12 +45,6 @@ $n3 color blue
 set udp0 [new Agent/UDP]
 $ns attach-agent $n1 $udp0
 
-# Create a CBR traffic source and attach it to udp0
-set cbr0 [new Application/Traffic/CBR]
-$cbr0 set packetSize_ 512
-$cbr0 set interval_ 0.005
-$cbr0 attach-agent $udp0
-
 # Create a null agent(sink) and attach it to n3
 set null0 [new Agent/Null]
 $ns attach-agent $n3 $null0
@@ -60,6 +53,13 @@ $ns attach-agent $n3 $null0
 # Connect traffic source and sink and assign flow id color
 $ns connect $udp0 $null0
 # $udp0 set fid_ 2
+
+
+# Create a CBR traffic source and attach it to udp0
+set cbr0 [new Application/Traffic/CBR]
+$cbr0 set packetSize_ 512
+$cbr0 set interval_ 0.005
+$cbr0 attach-agent $udp0
 
 
 $ns at 0.5 "$cbr0 start"

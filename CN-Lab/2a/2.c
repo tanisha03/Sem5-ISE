@@ -8,7 +8,7 @@ int orate=2,drop=0,cap=5,x,count=0,inp[10]={0},nsec,ch,i=0;
 for(i=0;i<5;i++)
 	inp[i]=rand()%10;
 nsec=i;
-printf("\n second       recieved        sent      dropped       remained \n");
+printf("\nsecond\trecieved\tsent\tdropped\tremained \n");
 for(i=0;count || i<nsec;i++)
 {
  printf("%d",i+1);

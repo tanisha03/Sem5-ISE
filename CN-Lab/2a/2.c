@@ -8,12 +8,12 @@ int orate=2,drop=0,cap=5,x,count=0,inp[10]={0},nsec,ch,i=0;
 for(i=0;i<5;i++)
 	inp[i]=rand()%10;
 nsec=i;
-printf("\nsecond\trecieved\tsent\tdropped\tremained \n");
+printf("\nsecond\trecieved\tsent\tdropped\tremained\n");
 for(i=0;count || i<nsec;i++)
 {
- printf("%d",i+1);
- printf(" \t %d\t ",inp[i]);
- printf(" \t %d\t ",MIN((inp[i]+count),orate));
+ printf("%d\t",i+1);
+ printf("%d\t\t",inp[i]);
+ printf("%d\t ",MIN((inp[i]+count),orate));
  if((x=inp[i]+count-orate)>0)
  {
   if(x>cap)
@@ -32,7 +32,7 @@ for(i=0;count || i<nsec;i++)
   drop=0;
   count=0;
   }
- printf(" \t %d \t %d \n",drop,count);
+ printf("%d\t%d \n",drop,count);
  }   // end of for loop
  return 0;
 }

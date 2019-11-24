@@ -11,30 +11,30 @@ if(strlen(in)%2!=0)
 else
         n=(strlen(in))/2;
 for(i=0;i<n;i++)
-    {
-temp=in[i*2];
-printf("%d-----\n",temp);
-temp=(temp*256)+in[(i*2)+1];
-printf("%d-----\n",temp);
-sum=sum+temp;
-printf("%d-----\n",sum);
-
-    }
+{
+    temp=in[i*2];
+    printf("%d-----\n",temp);
+    temp=(temp*256)+in[(i*2)+1];
+    printf("%d-----\n",temp);
+    sum=sum+temp;
+    printf("%d-----\n",sum);
+}
 if(fl==1)
-    {
-printf("Enter the checksum value \n");
-scanf ("%x", &temp);
-sum+=temp;
-    }
+{
+    printf("Enter the checksum value \n");
+    scanf ("%x", &temp);
+    sum+=temp;
+ }
 if(sum%65536!=0)
-    {
-        n=sum%65536;
-sum=(sum/65536) + n;
-    }
+{
+    n=sum%65536;
+    sum=(sum/65536) + n;
+}
 sum=65535-sum;
 printf("%x\n",sum);
 return sum;
 }
+
 void main()
 {
 int ch,sum;

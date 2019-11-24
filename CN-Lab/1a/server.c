@@ -6,7 +6,6 @@
 #include <unistd.h>//for NULL pointer and miscellaneous functions
 #include <arpa/inet.h> //agent for netinet structs
 #include <fcntl.h> //file control header
-
 #define bufsize 1024
 
 int main(){

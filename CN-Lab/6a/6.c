@@ -13,8 +13,12 @@ else
 for(i=0;i<n;i++)
     {
 temp=in[i*2];
+printf("%d-----\n",temp);
 temp=(temp*256)+in[(i*2)+1];
+printf("%d-----\n",temp);
 sum=sum+temp;
+printf("%d-----\n",sum);
+
     }
 if(fl==1)
     {

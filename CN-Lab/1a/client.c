@@ -11,7 +11,7 @@
 int main(){
 
   int clientSocket;
-  char buffer[1024],fname[255];
+  char buffer[bufsize],fname[255];
   struct sockaddr_in serverAddr;
   socklen_t addr_size;
 

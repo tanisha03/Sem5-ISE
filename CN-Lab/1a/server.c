@@ -56,8 +56,6 @@ int main(){
   else{
     n=read(fd,buffer,bufsize);
   }
-  
-
   send(newSocket,buffer,n,0);
   
   close(newSocket);

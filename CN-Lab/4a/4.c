@@ -8,7 +8,7 @@ void dij(int n,int v,int cost[10][10],int dist[])
  count=2;
  while(count<=n)
  {
-  min=99;
+  min=infinity;
   for(w=1;w<=n;w++)
    if(dist[w]<min && !flag[w])
     min=dist[w],u=w;

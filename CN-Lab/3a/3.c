@@ -27,7 +27,7 @@ int main()
             for(i=0;i<nodes;i++)
             for(j=0;j<nodes;j++)
             for(k=0;k<nodes;k++)
-                if(rt[i].dist[j]>costmat[i][k]+rt[k].dist[j])
+                if(rt[i].dist[j]>rt[i].dist[k]+rt[k].dist[j])
                 {
                     rt[i].dist[j]=rt[i].dist[k]+rt[k].dist[j];
                     rt[i].from[j]=k;

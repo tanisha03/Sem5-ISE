@@ -39,25 +39,24 @@ void main()
 {
 int ch,sum;
 do{
-printf("1.Encode \n2.Decode \n3.Exit \n");
-scanf("%d",&ch);
-switch(ch)
-        {
-
-case 1: printf("Enter the string \n");
-sum=checksum(0);
-printf("Checksum to append is:%x \n",sum);
-break;
-case 2: printf("Enter the string \n");
-sum=checksum(1);
-if(sum!=0)
-printf("The data has been tampered with or invalid checksum\n");
-else
-printf("The checksum is valid \n");
-break;
-case 3: break;
-default: printf("Invalid option, try again \n");
-        }
+    printf("1.Encode \n2.Decode \n3.Exit \n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+        case 1: printf("Enter the string \n");
+        sum=checksum(0);
+        printf("Checksum to append is:%x \n",sum);
+        break;
+        case 2: printf("Enter the string \n");
+        sum=checksum(1);
+        if(sum!=0)
+        printf("The data has been tampered with or invalid checksum\n");
+        else
+        printf("The checksum is valid \n");
+        break;
+        case 3: break;
+        default: printf("Invalid option, try again \n");
     }
+}
 while(ch!=3);
 }

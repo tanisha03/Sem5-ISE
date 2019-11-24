@@ -26,6 +26,7 @@ if(sum%65536!=0)
 {
     n=sum%65536;
     sum=(sum/65536) + n;
+    printf("%x\n",sum);
 }
 sum=65535-sum;
 printf("%x\n",sum);

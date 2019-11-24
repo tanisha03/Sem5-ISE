@@ -6,6 +6,7 @@ void dij(int n,int v,int cost[10][10],int dist[])
  for(i=1;i<=n;i++)
   flag[i]=0,dist[i]=cost[v][i];
  count=2;
+ flag[v]=1;
  while(count<=n)
  {
   min=infinity;

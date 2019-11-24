@@ -9,7 +9,7 @@ scanf("%s",in);
 if(strlen(in)%2!=0)
         n=(strlen(in)+1)/2;
 else
-        n=n=(strlen(in))/2;
+        n=(strlen(in))/2;
 for(i=0;i<n;i++)
     {
 temp=in[i*2];

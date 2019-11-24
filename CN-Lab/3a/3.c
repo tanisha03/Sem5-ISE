@@ -34,9 +34,10 @@ int main()
                     count++;
                 }
         }while(count!=0);
+        printf("\n-----------------------------------\n");
         for(i=0;i<nodes;i++)
         {
-            printf("\n\n For router %d\n",i+1);
+            printf("\n For router %d\n",i+1);
             for(j=0;j<nodes;j++)
             printf("\t\nnode %d via %d Distance %d",j+1,rt[i].from[j]+1,rt[i].dist[j]);
         }

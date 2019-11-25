@@ -52,7 +52,7 @@ int main()
         t[e-1]=(t[e-1]=='0')?'1':'0';
         printf("\n----------------------------------------");
         printf("\nErroneous data : %s\n",t);
-    }
+    }                         
     crc();
     for(e=0;(e<N-1) && (cs[e]!='1');e++);
         if(e<N-1)

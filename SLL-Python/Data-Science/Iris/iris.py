@@ -19,3 +19,7 @@ ax.set(
     ylabel="Total",
 )
 plt.show()
+
+ax = sns.countplot(x="sepal.width", hue="variety", palette="Set3", data=iris_df)
+ax.set(title="Flowers Categorical", xlabel="variety", ylabel="total")
+plt.show()

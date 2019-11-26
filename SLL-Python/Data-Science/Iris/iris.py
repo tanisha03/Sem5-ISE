@@ -20,6 +20,10 @@ ax.set(
 )
 plt.show()
 
-ax = sns.countplot(x="sepal.width", hue="variety", palette="Set3", data=iris_df)
+ax = sns.countplot(x="sepal.length", hue="variety", data=iris_df, palette="Set2")
+ax.set(title="Sepal Length", xlabel="Categories", ylabel="Count")
+plt.show()
+
+ax = sns.countplot(x="petal.width", hue="variety", palette="Set3", data=iris_df)
 ax.set(title="Flowers Categorical", xlabel="variety", ylabel="total")
 plt.show()

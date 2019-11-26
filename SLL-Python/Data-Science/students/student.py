@@ -58,7 +58,6 @@ ax.set(title="Math Marks Grouping", xlabel="Marks Groups", ylabel="Total")
 plt.show()
 
 
-
 student_df1["Marks_Categories_reading"] = pd.cut(
     student_df1.readingscore, marks_intervals, labels=categories
 )
@@ -67,7 +66,6 @@ ax = sns.countplot(
 )
 ax.set(title="Reading Marks Grouping", xlabel="Marks Groups", ylabel="Total")
 plt.show()
-
 
 
 student_df1["Marks_Categories_writing"] = pd.cut(

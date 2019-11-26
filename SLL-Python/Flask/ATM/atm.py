@@ -21,7 +21,6 @@ def index():
     if request.method == "POST":
         # Checks if user clicked on Withdraw
         if request.form["action"] == "Withdraw":
-
             # Checks if amount is greater than balance
             if int(request.form["amount"]) > session["balance"]:
                 msg = "Cannot withdraw amount greater than balance"

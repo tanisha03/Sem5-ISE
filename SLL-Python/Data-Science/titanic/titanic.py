@@ -58,7 +58,8 @@ plt.show()
 """No of passedngers in each group """
 
 
-# facet = sns.FacetGrid(titanic_df, hue="Survived", aspect=4)
-# facet.map(sns.kdeplot, "Age", shade=True)
-# facet.set(xlim=(0, titanic_df["Age"].max()))
-# facet.add_legend()
+facet = sns.FacetGrid(titanic_df, hue="Survived", aspect=4)
+facet.map(sns.kdeplot, "Age", shade=True)
+facet.set(xlim=(0, titanic_df["Age"].max()))
+facet.add_legend()
+plt.show()

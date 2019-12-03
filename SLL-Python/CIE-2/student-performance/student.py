@@ -31,7 +31,6 @@ student_df1["race/ethnicity"] = student_df1["race/ethnicity"].map(
     }
 )
 
-print(student_df1.head(10))
 
 ax = sns.countplot(
     x="test preparation course", hue="gender", palette="Set1", data=student_df

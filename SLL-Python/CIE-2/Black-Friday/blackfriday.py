@@ -22,9 +22,6 @@ data["City_Category"] = data["City_Category"].map(
     {"A": "Metro Cities", "B": "Small Towns", "C": "Villages"}
 )
 
-
-data["Marital_Status"] = data["Marital_Status"].map({1: "Married", 0: "Un-married"})
-
 data.rename(
     columns={
         "Product_Category_1": "Baseball Caps",
@@ -34,8 +31,7 @@ data.rename(
     inplace=True,
 )
 
-data["Wine tumblers"] = data["Wine tumblers"].fillna("5")
-data["Pet Raincoats"] = data["Pet Raincoats"].fillna("10")
+data["Marital_Status"] = data["Marital_Status"].map({1: "Married", 0: "Un-married"})
 
 print(data.head(10))
 

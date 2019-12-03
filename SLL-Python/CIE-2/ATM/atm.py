@@ -16,11 +16,11 @@ def index():
         balance = session["balance"] = 8000  # first time only
 
     if request.method == "GET":  # initialize get route,blank msg
-        session["transactions"]=0
+        session["transactions"] = 0
         return render_template("index.html", balance=balance, msg="Welcome to ATM")
 
     if request.method == "POST":
-        if session["transactions"]>5:
+        if session["transactions"] > 5:
             msg = "Cannot process more than 5 transactions"
             return render_template("index.html", balance=balance, msg=msg)
         # Checks if user clicked on Withdraw
@@ -32,7 +32,7 @@ def index():
 
             # Deducts amount entered from balance and stores in session
             else:
-                session["transactions"]=session["transactions"]+1
+                session["transactions"] = session["transactions"] + 1
                 balance = balance - int(request.form["amount"])
                 session["balance"] = balance
                 msg = "Money Withdrawn"
@@ -40,7 +40,7 @@ def index():
 
         # Checks if user clicked on Deposit
         elif request.form["action"] == "Deposit":
-            session["transactions"]=session["transactions"]+1
+            session["transactions"] = session["transactions"] + 1
             # Adds amount entered to balance and stores in session
             balance = balance + int(request.form["amount"])
             session["balance"] = balance

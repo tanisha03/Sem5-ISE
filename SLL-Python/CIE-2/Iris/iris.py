@@ -33,3 +33,7 @@ ax.set(
     title="Writing Marks Categorical Distribution",
 )
 plt.show()
+
+ax = sns.countplot(x="sepal.width", hue="variety", palette="Set3", data=iris_df)
+ax.set(title="Flowers Categorical", xlabel="Species", ylabel="total")
+plt.show()

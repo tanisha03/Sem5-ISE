@@ -14,14 +14,17 @@ def index():
         balance = session["balance"]  # after session has been initialized
     except KeyError:
         balance = session["balance"] = 8000  # first time only
-        session["transactions"]=0
 
     if request.method == "GET":  # initialize get route,blank msg
+        session["transactions"]=0
         return render_template("index.html", balance=balance, msg="Welcome to ATM")
 
     if request.method == "POST":
+        if session["transactions"]>5:
+            msg = "Cannot process more than 5 transactions"
+            return render_template("index.html", balance=balance, msg=msg)
         # Checks if user clicked on Withdraw
-        if request.form["action"] == "Withdraw":
+        elif request.form["action"] == "Withdraw":
             # Checks if amount is greater than balance
             if int(request.form["amount"]) > session["balance"]:
                 msg = "Cannot withdraw amount greater than balance"

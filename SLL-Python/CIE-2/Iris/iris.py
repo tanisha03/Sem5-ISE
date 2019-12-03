@@ -11,6 +11,7 @@ print("---info---")
 print(iris_df.info())
 print("---head---")
 print(iris_df.head())
+
 print("---Functions---")
 print(iris_df[["variety", "petal.width"]].groupby(["variety"], as_index=True).mean())
 
@@ -22,10 +23,3 @@ ax.set(
 )
 plt.show()
 
-ax = sns.countplot(x="sepal.length", hue="variety", data=iris_df, palette="Set2")
-ax.set(title="Sepal Length", xlabel="Categories", ylabel="Count")
-plt.show()
-
-ax = sns.countplot(x="petal.width", hue="variety", palette="Set3", data=iris_df)
-ax.set(title="Flowers Categorical", xlabel="variety", ylabel="total")
-plt.show()

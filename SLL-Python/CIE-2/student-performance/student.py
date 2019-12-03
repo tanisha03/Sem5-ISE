@@ -31,13 +31,14 @@ student_df1["race/ethnicity"] = student_df1["race/ethnicity"].map(
     }
 )
 
-
+# tally of M/F for test preparation
 ax = sns.countplot(
     x="test preparation course", hue="gender", palette="Set1", data=student_df
 )
 ax.set(title="Test Preparation", xlabel="Course", ylabel="Total")
 plt.show()
 
+# tally of M/F for student group
 ax = sns.countplot(x="race/ethnicity", hue="gender", palette="Set1", data=student_df1)
 ax.set(title="Students according to each group", xlabel="Ethnicity", ylabel="Total")
 plt.show()

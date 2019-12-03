@@ -23,3 +23,13 @@ ax.set(
 )
 plt.show()
 
+interval = (0, 1, 2, 3)
+categories = ["<0", "1-2", ">2"]
+iris_df["flowers_cats"] = pd.cut(iris_df["petal.width"], interval, labels=categories)
+ax = sns.countplot(x="flowers_cats", data=iris_df, hue="variety", palette="Set2")
+ax.set(
+    xlabel="Flowers Categorical",
+    ylabel="Total",
+    title="Writing Marks Categorical Distribution",
+)
+plt.show()

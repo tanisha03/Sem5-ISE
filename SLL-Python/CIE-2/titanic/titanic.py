@@ -15,7 +15,8 @@ print("=====Data Decription=====")
 titanic_df.info()
 titanic_df.describe()
 
-titanic_df = titanic_df.drop(["Name"], axis=1)
+titanic_df = titanic_df.drop(["Name", "PassengerId", "Ticket"], axis=1)
+titanic_df["Embarked"] = titanic_df["Embarked"].fillna("S")
 
 titanic_df.groupby(["Sex"], as_index=False).mean()
 

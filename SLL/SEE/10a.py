@@ -1,3 +1,4 @@
+from functools import reduce
 a=[1,23,8,34,17,4]
 b=[i*3 for i in a]
 print(b)

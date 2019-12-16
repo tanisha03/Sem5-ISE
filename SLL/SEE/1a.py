@@ -1,4 +1,4 @@
-print("enter intergers separated by space")
+print("enter integers separated by space")
 a=input().split() #separate elements by space
 arr=[int(i) for i in a] #convert each to integer
 print("Max :", max(arr))

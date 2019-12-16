@@ -7,9 +7,11 @@
             var price=a.options[a.selectedIndex].value;
             var qty=document.getElementById("qty").value;
             var ans=Number(price)*Number(qty);
-            // console.log(qty);
             var v=document.getElementById("msg");
             v.innerHTML=ans
+        }
+        function paid(){
+            alert("Paid");
         }
     </script>
 </head>
@@ -22,7 +24,7 @@
     </select><br/><br/>
     <input id="qty" type="number" placeholder="Quantity"/><br/><br/>
     <button onclick="sub()">Submit</button>
-    <button>Paid</button><br/><br/>
+    <button onclick="paid()">Paid</button><br/><br/>
     Total Price:  <span id="msg"></span>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Shop</title>
+    <script>
+        function sub(){
+            var a=document.getElementById("price");
+            var price=a.options[a.selectedIndex].value;
+            var qty=document.getElementById("qty").value;
+            var ans=Number(price)*Number(qty);
+            var v=document.getElementById("msg");
+            v.innerHTML=ans
+        }
+        function paid(){
+            alert("Paid");
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Item Name"/><br/><br/>
+    <select id="price">
+        <option>100</option>
+        <option>200</option>   
+        <option>300</option>      
+    </select><br/><br/>
+    <input id="qty" type="number" placeholder="Quantity"/><br/><br/>
+    <button onclick="sub()">Submit</button>
+    <button onclick="paid()">Paid</button><br/><br/>
+    Total Price:  <span id="msg"></span>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Items</title>
+  </head>
+
+  <body>
+    <h1>Enter Details here</h1>
+
+    <h5>{{msg}}</h5>
+
+    <!-- Form for details -->
+    <form action="{{url_for('index')}}" method="POST">
+      <input name="item1" type="text" placeholder="Item1" />
+      <input name="price1" type="text" placeholder="Price" /><br />
+      <input name="item2" type="text" placeholder="Item2" />
+      <input name="price2" type="text" placeholder="Price" /><br />
+      <input name="item3" type="text" placeholder="Item3" />
+      <input name="price3" type="text" placeholder="Price" /><br />
+      <input name="pay" type="submit" />
+    </form>
+  </body>
+</html>

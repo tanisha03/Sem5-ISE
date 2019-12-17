@@ -1,42 +1,26 @@
 window.onload = function() {
+  var details = {
+    name: "Shyam Singh",
+    aadhar: 123632563163123,
+    labtests: ["Blood test", "X-ray"]
+  };
+  var hospitals = {
+    name: "Apollo Hospital",
+    location: "New Delhi"
+  };
 
-    var teslaModels = [
-        {
-            "model": "modelS",
-            "name": "Model S",
-            "price": 69200,
-            "year": 2016
-        },
-        {
-            "model": "modelX",
-            "name": "Model X",
-            "price": 83700,
-            "year": 2017
-        },
-        {
-            "model": "model3",
-            "name": "Model 3",
-            "price": 35000,
-            "year": 2017
-        },
-    ];
-
-    teslaModels.forEach(function(item,index){
-        listElemet = document.createElement("th")
-        listElemet.id = item.model
-        listElemet.innerHTML = item.name
-        document.getElementById("menu").appendChild(listElemet)
-    })
-
-    teslaModels.forEach(mouseOverHandler);
-    function mouseOverHandler(item, index)
-    {
-        var elem = document.getElementById(item.model);
-        elem.onmouseover = function(){
-                document.getElementById("data-table").removeAttribute('hidden');
-                document.getElementById("model").innerHTML = item.name;
-                document.getElementById("price").innerHTML = item.price;
-                document.getElementById("year").innerHTML = item.year;
-        }
-    }
+  var a = document.getElementById("hospital");
+  a.innerHTML = hospitals["name"] + " : " + hospitals["location"];
+  var b = document.getElementById("patient");
+  b.addEventListener("mouseover", function(e) {
+    e.target.style.color = "orange";
+    var c = document.getElementById("details");
+    c.innerHTML = details["name"] + " : " + details["aadhar"];
+    var test = "";
+    details["labtests"].forEach(function(a) {
+      test += a + "    ";
+    });
+    var d = document.getElementById("tests");
+    d.innerHTML = test;
+  });
 };

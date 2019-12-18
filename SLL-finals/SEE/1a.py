@@ -11,7 +11,7 @@ i=int(input())
 arr.remove(i)
 print("enter element to be searched")
 i=int(input())
-if(i in a):
+if(i in arr):
     print("present")
 else:
     print("Not present")

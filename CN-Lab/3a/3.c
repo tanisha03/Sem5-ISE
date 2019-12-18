@@ -21,26 +21,26 @@ int main()
             rt[i].from[j]=j;
         }
     }
-        do
-        {
-            count=0;
-            for(i=0;i<nodes;i++)
-            for(j=0;j<nodes;j++)
-            for(k=0;k<nodes;k++)
-                if(rt[i].dist[j]>rt[i].dist[k]+rt[k].dist[j])
-                {
-                    rt[i].dist[j]=rt[i].dist[k]+rt[k].dist[j];
-                    rt[i].from[j]=k;
-                    count++;
-                }
-        }while(count!=0);
-        printf("\n-----------------------------------\n");
+    do
+    {
+        count=0;
         for(i=0;i<nodes;i++)
-        {
-            printf("\n For router %d\n",i+1);
-            for(j=0;j<nodes;j++)
-            printf("\t\nnode %d via %d Distance %d",j+1,rt[i].from[j]+1,rt[i].dist[j]);
-        }
+        for(j=0;j<nodes;j++)
+        for(k=0;k<nodes;k++)
+            if(rt[i].dist[j]>rt[i].dist[k]+rt[k].dist[j])
+            {
+                rt[i].dist[j]=rt[i].dist[k]+rt[k].dist[j];
+                rt[i].from[j]=k;
+                count++;
+            }
+    }while(count!=0);
+    printf("\n-----------------------------------\n");
+    for(i=0;i<nodes;i++)
+    {
+        printf("\n For router %d\n",i+1);
+        for(j=0;j<nodes;j++)
+        printf("\t\nnode %d via %d Distance %d",j+1,rt[i].from[j]+1,rt[i].dist[j]);
+    }
     printf("\n\n");
 
 }

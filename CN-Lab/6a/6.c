@@ -3,9 +3,10 @@
 int checksum(int fl)
 {
 char in[100];
-int buf[25];
+char b;
 int i,sum=0,n,temp,temp1;
-scanf("%s",in);
+scanf("%c",&b);//clear the buffer
+gets(in);
 if(strlen(in)%2!=0)
         n=(strlen(in)+1)/2;
 else

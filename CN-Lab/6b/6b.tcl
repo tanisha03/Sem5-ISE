@@ -2,7 +2,7 @@
 #Create Simulator
 set ns [new Simulator]
 
-set error_rate 0.0
+set error_rate 0.5
 
 #Use colors to differentiate the traffic
 $ns color 1 Blue
@@ -63,7 +63,7 @@ $tcp set fid_ 1
 # $tcp set window_ 8000
 $tcp set packetSize_ 552
 $ns attach-agent $n(0) $tcp
-set sink0 [new Agent/TCPSink/DelAck]
+set sink0 [new Agent/TCPSink]
 $ns attach-agent $n(4) $sink0
 $ns connect $tcp $sink0
 

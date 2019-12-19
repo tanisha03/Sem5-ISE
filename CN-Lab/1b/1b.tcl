@@ -31,8 +31,8 @@ set n2 [$ns node]
 set n3 [$ns node]
 
 # set up duplex links
-$ns duplex-link $n1 $n2 0.5Mb 20ms DropTail
-$ns duplex-link $n2 $n3 0.5Mb 20ms DropTail
+$ns duplex-link $n1 $n2 0.5Mb 40ms DropTail
+$ns duplex-link $n2 $n3 0.5Mb 40ms DropTail
 $ns queue-limit $n1 $n2 10
 $ns queue-limit $n2 $n3 10
 

@@ -35,10 +35,6 @@ for {set i 1} {$i < 7} {incr i} {
         $ns duplex-link $n($i) $n(0) 1Mb 10ms DropTail
 }
 
-# $ns duplex-link $n(4) $n(0) 1Mb 100ms DropTail
-# $ns duplex-link $n(5) $n(0) 1Mb 100ms DropTail
-# $ns duplex-link $n(6) $n(0) 1Mb 90ms DropTail
-
 Agent/Ping instproc recv {from rtt} {
         $self instvar node_
         puts "node [$node_ id] received ping answer from \

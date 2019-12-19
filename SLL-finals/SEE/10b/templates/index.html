@@ -1,21 +1,64 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <title>Form Details</title>
-  </head>
+<head>
+	<title>Form details</title>
+</head>
+<body>
 
-  <body>
-    <h1>Register here</h1>
+	<h1>Results</h1>
+	<h5>{{msg}}</h5>
 
-    <h5>{{msg}}</h5>
-    <!-- Error Message displayed here -->
 
-    <!-- Form for details -->
-    <form action="{{url_for('index')}}" method="POST">
-      USN (Eg. 1MS02IS001): <input name="usn" type="text" /><br />
-      D.O.B (Eg. dd/mm/yyyy) : <input name="dob" type="text" /><br />
-      <input name="***Register***" type="submit" />
-    </form>
-  </body>
+	<form action="{{url_for('index')}}" method="POST" id="t">
+		USN (Eg:1MS17IS002) : <input type="text" name="usn"><br>
+		D.O.B(dd/mm/yyyy) : <input type="text" name="dob"><br>
+		marks1:<input type="number" name="m1" value="0" min="0">
+		marks2:<input type="number" name="m2" value="0" min="0">
+		marks3:<input type="number" name="m3" value="0" min="0">
+
+		<input type="submit" name="REGISTER" onclick="return validateForm(this)">
+
+	</form>
+
+
+</body>
+
+<script type="text/javascript">
+	function validateForm(button) {
+
+		var form = document.getElementById("t");
+		if (form.usn.value == "") {
+			alert("Enter usn");
+			return false;
+		}
+
+		if (form.dob.value == "") {
+			alert("Enter D.O.B");
+			return false;
+		}
+
+		if (form.m1.value == "") {
+			alert("Enter marks1");
+			return false;
+		}
+
+		if (form.m2.value == "") {
+			alert("Enter marks2");
+			return false;
+		}
+
+		if (form.m3.value == "") {
+			alert("Enter marks3");
+			return false;
+		}
+
+		else
+			return true;
+
+
+
+
+	}
+
+</script>
 </html>

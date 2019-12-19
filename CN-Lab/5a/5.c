@@ -45,10 +45,8 @@ int main()
     scanf("%d",&e);
     if(e==0)
     {
-        do{
-            printf("\nEnter the position where error is to be inserted : ");
-            scanf("%d",&e);
-        }while(e==0 || e>a+N-1);
+        printf("\nEnter the position where error is to be inserted : ");
+        scanf("%d",&e);
         t[e-1]=(t[e-1]=='0')?'1':'0';
         printf("\n----------------------------------------");
         printf("\nErroneous data : %s\n",t);
@@ -60,6 +58,6 @@ int main()
         else
             printf("\nNo error detected\n\n");
             printf("\n----------------------------------------\n");
-        return 0;
+    return 0;
 }
 

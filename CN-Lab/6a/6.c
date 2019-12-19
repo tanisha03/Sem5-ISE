@@ -6,7 +6,7 @@ char in[100];
 char b;
 int i,sum=0,n,temp,temp1;
 scanf("%c",&b);//clear the buffer
-gets(in);
+gets(in);//ignore the warning while compilation
 if(strlen(in)%2!=0)
         n=(strlen(in)+1)/2;
 else

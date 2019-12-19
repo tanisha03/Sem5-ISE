@@ -5,11 +5,9 @@
 #include <unistd.h>
 #include <fcntl.h> 
 #include <arpa/inet.h>
-
 #define bufsize 1024
 
 int main(){
-
   int clientSocket;
   char buffer[bufsize],fname[255];
   struct sockaddr_in serverAddr;

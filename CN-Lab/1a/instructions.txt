@@ -1,7 +1,7 @@
 -->gcc server.c
--->./a.out 631
+-->./a.out 
 
 open another terminal
 
 -->gcc client.c
--->./a.out 127.0.0.1
+-->./a.out

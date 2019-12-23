@@ -1,22 +1,17 @@
 import sys 
-import os 
 from functools import reduce
 
 dict={}
 
-if(len(sys.argv)!=3):
+if(len(sys.argv)!=2):
     print("Invalid arguments")
     sys.exit()
 
-if(not(os.path.exists(sys.argv[1]))):
-    print("Invalid path")
-    sys.exit()
-
-if(sys.argv[2].split('.')[-1]!='txt'):
+if(sys.argv[1].split('.')[-1]!='txt'):
     print("Invalid file")
     sys.exit()
 
-with open(sys.argv[2]) as file:
+with open(sys.argv[1]) as file:
     for line in file:
         for word in line.split():
             dict[word]=dict.get(word,0)+1

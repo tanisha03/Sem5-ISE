@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="val"/>
+    <button onclick="hello()">
+    Submit</button>
+    <div id="msg"></div>
+</body>
+<script>
+function hello(){
+    var a=Number(document.getElementById("val").value)
+document.getElementById("msg").innerHTML=a*10
+}
+</script>
+</html>

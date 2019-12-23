@@ -71,7 +71,6 @@ while True:
         print(conv)
     else:
         print("wrong option")
-
     c = input("Continue? (y/n)")
     if c == "n":
         break

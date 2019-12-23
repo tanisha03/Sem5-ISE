@@ -24,6 +24,7 @@ with open(sys.argv[2]) as file:
 t=sorted([(v,k) for k,v in dict.items()],reverse=True)
 l1=[]
 
+print(t)
 for p in t[0:10]:
     print(p[1])
     l1.append(len(p[1]))

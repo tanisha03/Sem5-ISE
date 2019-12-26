@@ -62,8 +62,7 @@ FROM SAILOR
 WHERE SNAME='RAM');
 
 
-SELECT BID, SNAME
-FROM RESERVES r join SAILOR s on (r.SID=s.SID);
+select bid from reserves group by bid having count(sid)=(select count(sid) from sailor);
 
 
 SELECT COUNT(BID), SID

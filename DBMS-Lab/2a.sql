@@ -59,3 +59,20 @@ from supplier, supply, part
 where pname='bolt' AND supply.sno=supplier.sno AND part.pno=supply.pno;
 
 delete from part where colour='green';
+
+
+-- MONGODB
+
+ >db.createCollection("WAREHOUSE")
+
+ >db.WAREHOUSE.insert({"PNO":1947,"Pname":'bolts',"Colour":'Black',"SNO":1234,"Sname":'ABC',"Address":'blore'})
+>db.WAREHOUSE.insert({"PNO":1950,"Pname":'chain',"Colour":'Blue',"SNO":4567,"Sname":'DEF',"Address":'chen'})
+>db.WAREHOUSE.insert({"PNO":1950,"Pname":'chain',"Colour":'Blue',"SNO":3964,"Sname":'GHI',"Address":'mum'})
+>db.WAREHOUSE.insert({"PNO":1919,"Pname":'wheel',"Colour":'White',"SNO":4879,"Sname":'PQR',"Address":'delhi'})
+>db.WAREHOUSE.insert({"PNO":1956,"Pname":'nuts',"Colour":'Black',"SNO":9988,"Sname":'STU',"Address":'kol'})
+
+>db.WAREHOUSE.find().pretty()
+
+
+>db.WAREHOUSE.update({"PNO":1950},{$set:{"PNO":2017}},{multi:true})
+>db.WAREHOUSE.find({"PNO":2017}).pretty()

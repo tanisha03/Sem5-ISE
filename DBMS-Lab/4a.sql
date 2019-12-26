@@ -62,3 +62,17 @@ CREATE TABLE PARTT
  SELECT COUNT(PNO),WNO 
  FROM SHIPMENTS 
  GROUP BY WNO;
+
+
+--  MONGODB
+
+>db.createCollection("SHIPMENT")
+
+>db.SHIPMENT.insert({"PNO":11,"PNAME":'bolts',"COLOUR":'Black',"WNO":99,"WNAME":'ABC',"QUANTITY":45,"DATE":'2017-09-25'})
+>db.SHIPMENT.insert({"PNO":12,"PNAME":'nuts',"COLOUR":'Black',"WNO":99,"WNAME":'ABC',"QUANTITY":38,"DATE":'2017-09-28'})
+>db.SHIPMENT.insert({"PNO":13,"PNAME":'chain',"COLOUR":'white',"WNO":97,"WNAME":'DEF',"QUANTITY":68,"DATE":'2017-08-28'})
+>db.SHIPMENT.insert({"PNO":14,"PNAME":'bolts',"COLOUR":'Black',"WNO":88,"WNAME":'PQR',"QUANTITY":10,"DATE":'2017-01-25'})
+>db.SHIPMENT.insert({"PNO":19,"PNAME":'wheel',"COLOUR":'Blue',"WNO":99,"WNAME":'ABC',"QUANTITY":54,"DATE":'2017-01-01'})
+
+>db.SHIPMENT.find({"WNAME":'ABC'}).pretty()
+>db.SHIPMENT.aggregate([{ $group:{_id:"$WNAME",total:{$sum:"$QUANTITY"}}}])

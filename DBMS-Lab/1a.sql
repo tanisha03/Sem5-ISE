@@ -1,3 +1,4 @@
+-- SQL
 create table e(ssn varchar(6),name varchar(10),deptno int, primary key(ssn));
 
 create table p (projectno varchar(10),projectarea varchar(20),primary key(projectno));
@@ -33,3 +34,18 @@ select count(ssn),deptno from e group by deptno;
   
 update a set projectno='200' where usn='03';
 select * from a;
+
+-- MONGODB
+db.createCollection("EMPLOYEE")
+
+>db.EMPLOYEE.insert({"SSN":4567,"Name":'James',"DeptNo":'XYZ',"ProjectNo":101})
+>db.EMPLOYEE.insert({"SSN":3256,"Name":'Jack',"DeptNo":'XYZ',"ProjectNo":102})
+>db.EMPLOYEE.insert({"SSN":7894,"Name":'Chris',"DeptNo":'ABC',"ProjectNo":103})
+>db.EMPLOYEE.insert({"SSN":4587,"Name":'dwayne',"DeptNo":'DEF',"ProjectNo":104})
+>db.EMPLOYEE.insert({"SSN":6644,"Name":'trump',"DeptNo":'DEF',"ProjectNo":104})
+
+>db.EMPLOYEE.find().pretty()
+
+
+>db.EMPLOYEE.find({"DeptNo":'XYZ'}).pretty()
+>db.EMPLOYEE.find({"ProjectNo":104}).pretty()

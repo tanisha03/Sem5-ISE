@@ -1,6 +1,6 @@
 -- Program to raise a trigger when EMPLOYEE table is modified on a particular day(here, saturday or sunday)
 
-set serveroutput on;
+serveroutput set on;
 
 create or replace trigger myTrigger3
 before insert or delete or update on employee

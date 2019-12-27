@@ -3,7 +3,7 @@ create table e(ssn varchar(6),name varchar(10),deptno int, primary key(ssn));
 
 create table p (projectno varchar(10),projectarea varchar(20),primary key(projectno));
 
-create table a(usn varchar(6),projectno varchar(10),foreign key(usn)references e(ssn),foreign key(projectno)references p(projectno));
+create table a(ssn varchar(6),projectno varchar(10),foreign key(ssn)references e(ssn) on delete cascade,foreign key(projectno)references p(projectno)) on delete cascade;
 
 
 insert into e values('01','abc',10);
@@ -28,11 +28,11 @@ select * from p;
   
 select * from a;
   
-select ssn from e where ssn=(select usn from a where projectno=(select projectno from p where projectarea='database'));
+select ssn from e where ssn=(select ssn from a where projectno=(select projectno from p where projectarea='database'));
   
 select count(ssn),deptno from e group by deptno;
   
-update a set projectno='200' where usn='03';
+update a set projectno='200' where ssn='03';
 select * from a;
 
 -- MONGODB
